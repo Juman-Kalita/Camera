@@ -1,0 +1,8 @@
+{
+  "buildCommand": null,
+  "outputDirectory": "frontend",
+  "devCommand": null,
+  "installCommand": null,
+  "framework": null,
+  "public": true
+}
