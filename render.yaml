@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: workplace-analytics-backend
+    env: python
+    buildCommand: pip install -r requirements-deploy.txt
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: CAMERA_SOURCE
+        value: http
+      - key: CAMERA_HTTP_URL
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.12.0
